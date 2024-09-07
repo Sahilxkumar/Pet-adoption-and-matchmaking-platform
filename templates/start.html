@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>start-Newfangled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url("{{ url_for('static', filename='ca2.jpg') }}");
+            /* Replace 'your-background-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            background-color: rgba(76, 175, 80, 0.7);
+            overflow-x: hidden;
+            /* Adjust the RGB values and alpha channel (0.7 for 70% opacity) */
+            backdrop-filter: blur(10px);
+            /* Adjust the blur radius as needed */
+            height: 130vh;
+        }
+
+
+        header {
+            background-color: #333333a3;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            background-color: #254e2686;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            z-index: 1;
+            padding: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            max-width: 60%;
+            /* Adjusted max-width */
+            margin: 25px auto;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #254e2686;
+            color: white;
+            padding: 20px;
+            /* Increased padding */
+            margin: 60px auto;
+            /* Increased margin to create space between boxes */
+            border-radius: 5px;
+            border-radius: 50%;
+            width: 30%;
+            /* Adjusted width */
+
+            text-align: center;
+            /* Align text to the left inside the box */
+        }
+
+        .box i {
+            font-size: 24px;
+            position: relative;
+            /* Adjusted position to relative */
+            top: -10px;
+            /* Adjusted top position */
+            display: block;
+            /* Ensure block display for the icon */
+            margin: 0 auto 10px;
+            /* Margin for spacing between the icon and item name */
+            color: white;
+        }
+
+        .box a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            /* Margin to separate ">" from the item name */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Newfangled</h1>
+
+    </header>
+
+    <nav>
+        <span class="typed-text"></span>
+    </nav>
+
+
+    <div class="container">
+        <div class="box">
+            <i class="fas fa-home"></i>
+            <p>Home</p>
+            <a href="next_page.html">></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Products</p>
+            <a href="next_page.html">></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-paw"></i>
+            <p>Pets Info</p>
+            <a href="next_page.html">></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-phone"></i>
+            <p>Contact us</p>
+            <a href="next_page.html">></a>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                strings: ["Welcome to our website! Explore our services and learn more about us."],
+                typeSpeed: 70,
+                showCursor: true,
+                cursorChar: '|',
+                loop: Infinity  // Set loop to Infinity for continuous typing
+            };
+
+            var typed = new Typed('.typed-text', options);
+        });
+    </script>
+</body>
+
+</html>
